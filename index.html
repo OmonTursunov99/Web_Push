@@ -5,11 +5,11 @@
     <title>Title</title>
 </head>
 <body>
-<button type="button" id="subscribe">Submit</button>
+<button type="button" id="subscribe" onclick="subscribe()">Submit</button>
 <script>
     addEventListener('load', async () => {
         let sw = navigator.serviceWorker.register('./app.js');
-        console.log('LOAD', sw)
+        console.log(sw)
     })
     async function subscribe() {
         let sw = await navigator.serviceWorker.ready;
